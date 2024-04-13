@@ -11,6 +11,18 @@ spring:
       chat:
         options:
           model: gpt-4-turbo
+    vectorstore:
+      milvus:
+        client:
+          host: "localhost"
+          port: 19530
+          username: "root"
+          password: "milvus"
+        databaseName: "default"
+        collectionName: "vector_store"
+        embeddingDimension: 1536
+        indexType: IVF_FLAT
+        metricType: COSINE
 sfg:
   aiapp:
     vectorStorePath: /tmp/vectorstore.json
