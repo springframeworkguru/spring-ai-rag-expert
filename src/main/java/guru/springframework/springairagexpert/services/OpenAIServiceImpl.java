@@ -1,7 +1,7 @@
-package llc.realms.springairagexpert.services;
+package guru.springframework.springairagexpert.services;
 
-import guru.springframework.springairag.model.Answer;
-import guru.springframework.springairag.model.Question;
+import guru.springframework.springairagexpert.model.Answer;
+import guru.springframework.springairagexpert.model.Question;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.ChatClient;
 import org.springframework.ai.chat.ChatResponse;

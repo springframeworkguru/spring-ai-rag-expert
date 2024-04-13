@@ -1,4 +1,4 @@
-package llc.realms.springairagexpert.config;
+package guru.springframework.springairagexpert.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.document.Document;

@@ -1,4 +1,4 @@
-package llc.realms.springairagexpert.config;
+package guru.springframework.springairagexpert.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
