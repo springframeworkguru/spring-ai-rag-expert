@@ -3,7 +3,6 @@ package guru.springframework.springairagexpert.services;
 import guru.springframework.springairagexpert.model.Answer;
 import guru.springframework.springairagexpert.model.Question;
 import lombok.RequiredArgsConstructor;
-import org.springframework.ai.chat.ChatResponse;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.model.ChatResponse;
@@ -49,9 +48,7 @@ public class OpenAIServiceImpl implements OpenAIService {
         Message userMessage = promptTemplate.createMessage(Map.of("input", question.question(), "documents",
                 String.join("\n", contentList)));
 
-        //contentList.forEach(System.out::println);
-
-        ChatResponse response = chatModel.call(prompt);
+        ChatResponse response = chatModel.call(new Prompt(List.of(systemMessage, userMessage)));
 
         return new Answer(response.getResult().getOutput().getContent());
     }
