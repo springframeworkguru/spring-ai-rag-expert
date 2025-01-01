@@ -22,7 +22,7 @@ import java.util.List;
 public class VectorStoreConfig {
     @Bean
     SimpleVectorStore simpleVectorStore(EmbeddingModel embeddingModel, VectorStoreProperties vectorStoreProperties) {
-        var store =  new SimpleVectorStore(embeddingModel);
+        var store =  SimpleVectorStore.builder(embeddingModel).build();
         File vectorStoreFile = new File(vectorStoreProperties.getVectorStorePath());
 
         if (vectorStoreFile.exists()) {
